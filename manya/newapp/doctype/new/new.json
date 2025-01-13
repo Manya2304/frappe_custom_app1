@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-10 11:59:15.334548",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_xsac",
+  "amount",
+  "buy",
+  "units"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_xsac",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "buy",
+   "fieldtype": "Check",
+   "label": "buy",
+   "mandatory_depends_on": "eval:doc.amount"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "amount",
+   "no_copy": 1,
+   "options": "new",
+   "print_hide": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "units",
+   "fieldtype": "Link",
+   "label": "units",
+   "mandatory_depends_on": "eval:doc.amount",
+   "no_copy": 1,
+   "options": "new",
+   "print_hide": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-10 16:38:13.236975",
+ "modified_by": "Administrator",
+ "module": "Newapp",
+ "name": "new",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

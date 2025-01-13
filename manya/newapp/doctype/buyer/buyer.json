@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "BUYER.#####",
+ "creation": "2025-01-13 23:43:36.938128",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_sv3g",
+  "amended_from",
+  "n",
+  "gender",
+  "item_purchased",
+  "units",
+  "purchased_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_sv3g",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Buyer",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "n",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "Male\nFemale"
+  },
+  {
+   "fieldname": "item_purchased",
+   "fieldtype": "Data",
+   "label": "Item Purchased"
+  },
+  {
+   "fieldname": "units",
+   "fieldtype": "Int",
+   "label": "Units"
+  },
+  {
+   "fieldname": "purchased_on",
+   "fieldtype": "Datetime",
+   "label": "Purchased on",
+   "mandatory_depends_on": "eval:doc.item_purchased"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-14 01:28:06.521705",
+ "modified_by": "Administrator",
+ "module": "Newapp",
+ "name": "Buyer",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SELLER.#####",
+ "creation": "2025-01-13 23:46:47.122733",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_hpfu",
+  "amended_from",
+  "seller_organization",
+  "item_sold",
+  "units",
+  "discount"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_hpfu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Seller",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "seller_organization",
+   "fieldtype": "Data",
+   "label": "Seller Organization"
+  },
+  {
+   "fieldname": "item_sold",
+   "fieldtype": "Link",
+   "label": "Item Sold",
+   "options": "Buyer"
+  },
+  {
+   "fetch_from": "item_sold.units",
+   "fieldname": "units",
+   "fieldtype": "Data",
+   "label": "Units"
+  },
+  {
+   "depends_on": "eval:doc.item_sold",
+   "fieldname": "discount",
+   "fieldtype": "Percent",
+   "label": "Discount"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-14 01:30:10.109314",
+ "modified_by": "Administrator",
+ "module": "Newapp",
+ "name": "Seller",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
